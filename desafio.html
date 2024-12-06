@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <button class="home">HOME</button>
+
+    <input type="password" class="senha" placeholder="Digite sua senha: ">
+    <button class="verificar">Verificar</button>
+    <div class="verify">
+
+    </div>
+    <style>
+         body{
+            background-image: url(imagens/7.jpeg);
+            background-repeat: no-repeat;
+            background-size: 1920px 1080px;
+        }
+            button{
+            background-color: rgb(255, 253, 127);
+            border: solid 1px rgb(255, 253, 127);
+            margin-left: 58rem;
+            margin-top: 10px;
+            height: 3rem;
+            width: 6rem;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            transition: 1s;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+}
+
+            .senha{
+             border-radius: 20px;
+            margin-left: 55rem
+    }
+
+            p{
+                text-align: center;
+            }
+
+            button:hover{
+            background-color: rgb(255, 204, 127) ;
+            transition: 1s;
+            border-radius: 20px;
+}
+    </style>
+        
+    <script>
+
+        document.querySelector('.verificar').addEventListener('click', function() {
+            let pass = document.querySelector('.senha').value;
+
+        
+                let verify = document.querySelector('.verify')
+            if (pass == "carlamachado"){
+            verify.innerHTML = "<p> Senha válida </p>"
+
+        } else {
+            verify.innerHTML = "<p> Senha inválida </p>"
+        }
+        })
+
+       
+      
+
+        function redirecionar(pagina) {
+            window.location.href = pagina;
+        }
+        
+        document.querySelector('.home').addEventListener('click', function() {
+            redirecionar('index.html');
+        });
+    </script>
+</body>
+</html>

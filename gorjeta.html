@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorjeta</title>
+</head>
+<body>
+
+    <button class="home">HOME</button>
+    <style>
+        body{
+            background-image: url(imagens/3.webp);
+            background-repeat: no-repeat;
+            background-size: 1920px 1080px;
+        }
+        button{
+    background-color: rgb(255, 253, 127);
+    border: solid 1px rgb(255, 253, 127);
+    margin-left: 4rem;
+    margin-top: 10px;
+    height: 5rem;
+    width: 6rem;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    transition: 1s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: rgb(255, 204, 127) ;
+    transition: 1s;
+    border-radius: 20px;
+}
+    </style>
+    <script>
+       let notas = alert("Satisfação: \n 1 - Bom \n 2 - Ótimo \n 3 - Excelente");
+        let satisfacao = parseInt(prompt("Digite sua nota de satisfação: "));
+
+        if (satisfacao === 1) {
+           alert("Sua gorjeta será de 10%. ");
+    }   else if (satisfacao === 2) {
+           alert("Sua gorjeta será de 15%. ");
+     }  else if(satisfacao === 3) {
+           alert("Sua gorjeta será de 20%. ");
+    } else{
+        alert("Valor inválido, tente novamente.")
+    }
+
+function redirecionar(pagina) {
+            window.location.href = pagina;
+        }
+        
+document.querySelector('.home').addEventListener('click', function() {
+            redirecionar('index.html');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternando entre modo claro e modo escuro</title>
+</head>
+<body>
+    
+<!-- primeira forma de alterar o tema -->
+
+<button id="toggleMode" onclick="
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+    
+">Alternar Tema</button>
+
+<p>Olá, eu sou um texto na página
+<br>
+Esta página tem um botão para alterar o tema claro e escuro.</p>
+<style>
+
+    body.light {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+body.dark {
+    background-color: rgb(17, 48, 36);
+    color: white;
+}
+p{
+    font-family: monospace;
+}
+</style>
+
+<!-- terceira forma de mudar o tema -->
+
+<button id="botaoAlternar" onclick="alterna()">Alternar tema</button>
+
+<p>Olá, eu sou um texto na página
+    <br>
+    Esta página tem um botão para alterar o tema claro e escuro.</p>
+
+<!-- segunda forma de alterar o tema -->
+
+<script>
+
+function alterna(){
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+}
+// } para a terceira forma
+
+const toggleMode = document.getElementById("toggleMode");
+
+toggleMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+});
+
+</script>
+</body>
+</html>

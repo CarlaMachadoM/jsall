@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    .oculto {
+        display: none;
+    }
+    .visivel {
+        display: block;
+        color:forestgreen;
+        font-family: monospace;
+        font-size: 5rem;
+        margin-left: 30rem;
+        margin-top: 10rem;
+    }
+    #botao{
+        background-color: rgb(46, 46, 160);
+        color: aliceblue;
+        border-radius: 5px;
+        transition: 1s;
+        border: solid 2px rgb(0, 0, 0);
+        height: 10rem;
+        width: 20rem;
+        font-size: 2rem;
+        font-family: monospace;
+        margin-left: 50rem;
+    }
+    #botao:hover{
+        transition: 1s;
+        background-color: hotpink;
+        
+    }
+
+</style>
+<button id="botao">Ocultar/Mostrar</button>
+<div id="caixa" class="oculto">Este texto será ocultado.</div>
+
+
+<script>
+    
+// Seleciona os elementos
+const caixa = document.getElementById("caixa");
+const botao = document.getElementById("botao");
+
+botao.addEventListener("mouseout", () => {
+    // Verifica se a caixa tem a classe "visivel"
+    if (caixa.classList.contains("visivel")) {
+        // Troca a classe para "oculto"
+        caixa.classList.replace("visivel", "oculto");
+    } else {
+        // Troca a classe para "visivel"
+        caixa.classList.replace("oculto", "visivel");
+    }
+});
+
+botao.addEventListener("mouseover", () => {
+    // Verifica se a caixa tem a classe "visivel"
+    if (caixa.classList.contains("visivel")) {
+        // Troca a classe para "oculto"
+        caixa.classList.replace("visivel", "oculto");
+    } else {
+        // Troca a classe para "visivel"
+        caixa.classList.replace("oculto", "visivel");
+    }
+});
+
+
+
+
+</script>
+</body>
+</html>

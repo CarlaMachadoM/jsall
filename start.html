@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<script>
+
+// digite um numero 
+
+    let numero = prompt("Digite um número:");
+
+    if (numero > 0) {
+        alert("O número é positivo!");
+    } else {
+        alert("O número é negativo ou zero!");
+    }
+
+
+// maior de idade
+
+
+    let idade = prompt("Digite sua idade:");
+
+    if (idade >= 18) {
+        alert("Você é maior de idade!");
+    } else {
+        alert("Você é menor de idade!");
+    }
+
+
+// impar ou par
+
+    let numero = prompt("Digite um número: ");
+    if (numero % 2 === 0) {
+        alert("O número é par.");
+    } else {
+        alert("O número é ímpar.")
+    }
+
+
+// numero secreto
+
+    let secret = 5
+    let chute = prompt("Adivinhe o número (entre 1 a 10): ");
+    if (chute == secret){
+        alert("Você acertou.");
+    } else{
+        alert("Você errou, o número era " + secret)
+    }
+
+
+// notas 
+
+    let nota = Number(prompt("Digite uma nota de 0 a 10: "));
+    if (nota >= 7){
+        alert("Parabéns, você passou de ano. ");
+    } else if (nota >= 5){
+        alert("Você está de recuperação. ")
+    } else if (nota < 5){
+        alert("Você repetiu de ano. ")
+    }
+
+
+</script>
+
+
+</body>
+</html>

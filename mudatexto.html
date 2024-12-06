@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button id="mudaMensagem">Mudar Mensagem</button>
+<button id="reset"> Reset </button>   
+<h2 id="mensagem">Clique no botão para mudar esta mensagem!</h2>
+
+
+<style>
+    #mensagem{
+        font-family: monospace;
+    }
+    #mudaMensagem{
+        background-color: rgb(0, 139, 42);
+        border: solid 2px white;
+        width: 10rem;
+        height: 5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-family: monospace;
+        color: white;
+        margin-left: 40rem;
+        transition: 1s;
+    }
+    #mudaMensagem:hover{
+        background-color: rgb(6, 66, 56);
+        transition: 1s;
+    }
+    #reset{
+        background-color: darkmagenta;
+        border: solid 2px white;
+        width: 10rem;
+        height: 5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-family: monospace;
+        color: white;
+        transition: 1s;
+    }
+    #reset:hover{
+        background-color: mediumvioletred;
+        transition: 1s;
+    }
+</style>
+
+<script>
+
+    const mensagem = document.getElementById("mensagem");
+    const mudaMensagem = document.getElementById("mudaMensagem");
+
+    mudaMensagem.addEventListener("click", () => {
+        mensagem.innerText += " All work and no play make Jack a dull boy.";
+    });
+
+    reset.addEventListener("click", ()=> {
+        mensagem.innerText = "Clique no botão para mudar essa mensagem."
+    })
+</script>
+</body>
+</html>

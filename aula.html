@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de js</title>
+</head>
+<body>
+    <section id="artigos">
+
+
+
+    </section>
+
+<script>
+    document.getElementsById("artigo").innerHTML = "<h1> Artigo sobre roupas </h1>"
+
+    const pai = document.getElementbyId("artigos");
+    const filho = document.createElement("h1");
+    filho.innerText = "Artigo sobre roupas";
+    pai.appendChild(filho);
+    
+    // para remover
+    pai.removeChild(filho);
+</script>
+</body>
+</html>

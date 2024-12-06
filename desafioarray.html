@@ -1,0 +1,92 @@
+<!-- Uma lista de alimentos contém: "Arroz", "Feijão", "Batata", "Macarrão", "Carne". Para uma receita específica, você só precisa dos ingredientes "Feijão" e "Batata". Crie uma nova lista que contenha apenas esses dois ingredientes e exiba o resultado. -->
+
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecionar Ingredientes</title>
+  <style>
+    body {
+      font-family: monospace;
+      margin: 20px;
+      text-align: center;
+      background-image: url('https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .ingredients {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 300px;
+      backdrop-filter: blur(12px);
+      margin-top: 10px;
+      color: tomato;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    h1{
+        backdrop-filter: blur(12px);
+        margin-top: 300px;
+        color: hotpink;
+        width: 200px;
+        margin-left: 830px;
+        border-radius: 10px;
+    }
+    button{
+        background-color: purple;
+        border: solid 1px purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selecionar Ingredientes</h1>
+  <div class="ingredients">
+    <label><input type="checkbox" value="Arroz"> Arroz</label><br>
+    <label><input type="checkbox" value="Feijão"> Feijão</label><br>
+    <label><input type="checkbox" value="Batata"> Batata</label><br>
+    <label><input type="checkbox" value="Macarrão"> Macarrão</label><br>
+    <label><input type="checkbox" value="Carne"> Carne</label><br>
+  </div>
+  <button id="show-selected">Exibir Ingredientes Selecionados</button>
+  <p class="result" id="result"></p>
+
+  <script>
+    // Captura elementos do HTML
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+    const showSelectedBtn = document.getElementById('show-selected')
+    const resultDiv = document.getElementById('result')
+
+    // Evento de clique no botão
+    showSelectedBtn.addEventListener('click', () => {
+      const selectedIngredients = [] // Array para armazenar os ingredientes selecionados
+
+      // Função nomeada para verificar checkboxes selecionados
+      function verificarCheckbox(checkbox) {
+        if (checkbox.checked) {
+          selectedIngredients.push(checkbox.value) // Adiciona o valor do checkbox ao array
+        }
+      }
+
+      // Verifica quais checkboxes estão marcados
+      checkboxes.forEach(verificarCheckbox)
+
+      // Atualiza o conteúdo da área de resultado
+      if (selectedIngredients.length > 0) {
+        resultDiv.textContent = `Ingredientes selecionados: ${selectedIngredients.join(', ')}`
+      } else {
+        resultDiv.textContent = 'Nenhum ingrediente selecionado.'
+      }
+    })
+  </script>
+</body>
+</html>

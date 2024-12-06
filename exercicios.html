@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //    EXERCÍCIOS 
+
+        //     Verificação de múltiplos números:
+        // Peça três números ao usuário. Verifique se todos são positivos e exiba uma mensagem confirmando ou negando isso.
+
+        let numero1 = prompt("Digite o primeiro número: ");
+        let numero2 = prompt("Digite o segundo número: ");
+        let numero3 = prompt("Digite o terceiro número: ");
+
+        if (numero1 >= 1) {
+            alert("O primeiro número é positivo. ");
+        } else {
+            alert("O primeiro número é negativo. ")
+        }
+        if (numero2 >= 1) {
+            alert("O segundo número é positivo. ");
+        } else {
+            alert("O segundo número é negativo. ")
+        }
+        if (numero3 >= 1) {
+            alert("O terceiro número é positivo. ");
+        } else {
+            alert("O terceiro número é negativo. ")
+        }
+
+        // Calculadora simples:
+        // Pergunte dois números e uma operação matemática (soma, subtração, multiplicação ou divisão). Exiba o resultado apenas se a operação for válida.
+
+        let num = prompt("Digite um número para fazer uma conta: ");
+        let num2 = prompt("Digite o segundo número para a conta: ");
+        let conta = prompt("Digite o símbolo da operação: + - / ou *: ");
+
+        if (conta = "+") {
+            let soma = parseFloat(num) + (num2);
+            alert(`O resultado da conta é ${soma}`)
+        }
+
+        if (conta = "-") {
+            let sub = parseFloat(num) - (num2);
+            alert(`O resultado da conta é ${sub}`)
+        }
+
+        if (conta = "/") {
+            let divi = parseFloat(num) / (num2);
+            alert(`O resultado da conta é ${divi}`)
+        }
+
+        if (conta = "*") {
+            let multi = parseFloat(num) * (num2);
+            alert(`O resultado da conta é ${multi}`)
+        }
+
+        // Número no intervalo:
+        // Peça um número ao usuário e informe se ele está entre 50 e 100, inclusive.
+
+        let num = prompt("Digite um número: ");
+
+        if (num >= 50 && <= 100) {
+            alert("O número digitado está entre 50 e 100")
+        } else if {
+            alert("O número digitado está fora do limite 50 a 100")
+        }
+
+// Desconto em compras:
+// Pergunte o valor total de uma compra. Se o valor for maior que 100 reais, aplique um desconto de 10% e exiba o valor final. Caso contrário, mostre o valor sem desconto.
+
+let compra = prompt("Digite o valor da sua compra: ");
+
+        if (compra > 100); {
+            let valor = parseFloat(compra) - 10 / 100;
+            alert(`O valor total da sua compra com desconto é: ${valor}`)
+        } else if {
+            alert(`O valor da sua compra é de: ${compra}.`)
+}
+
+
+// Classificação por altura:
+// Peça a altura de uma pessoa (em cm) e diga se ela é "Baixa", "Média" ou "Alta". Considere: baixa (< 150 cm), média (150-180 cm) e alta (> 180 cm).
+
+    let altura = prompt("Digite sua altura em cm: ");
+
+    if (altura < 150){
+        alert("Você é baixo. ");
+    } else if (altura >=150 && altura <=180) {
+        alert("Você tem altura média.");
+    } else if (altura >180){
+        alert("Você é alto.")
+    }
+
+
+// Verificação de senha:
+// Pergunte a senha ao usuário e compare com uma senha pré-definida (por exemplo, 1234). Exiba "Acesso permitido" se a senha estiver correta, e "Acesso negado" caso contrário.
+
+    let senha = 09876
+
+    let digite = prompt("Digite sua senha: ");
+
+    if (digite = senha){
+        alert("Senha correta, faça seu login. ")
+    } else if {
+        alert("Sua senha está errada, tente novamente. ")
+    }
+
+
+// Par ou ímpar com extra:
+// Peça um número ao usuário e informe se ele é par ou ímpar. Se for ímpar e maior que 50, exiba também a mensagem "Número especial".
+
+    let numero = prompt("Digite um número: ");
+
+    if (numero % 2 === 0) {
+        alert("O número é par.");
+    } else{
+        alert("Número ímpar");
+        if (numero > 50){
+            alert("Número especial.")
+    }
+    }
+
+
+// Classificação etária completa:
+// Pergunte a idade do usuário e diga se ele é criança (até 12 anos), adolescente (13-17 anos), adulto (18-64 anos) ou idoso (65 anos ou mais).
+
+let idade = prompt("Digite sua idade: ");
+
+if (idade <= 12){
+    alert("Você é criança.");
+} else if (idade >=13 && idade <=17){
+    alert("Você é adolescente. ");
+} else if (idade >=18 && idade <=64){
+    alert("Você é adulto. ");
+} else if (idade >=65){
+    alert("Você é idoso. ")
+}
+
+
+// Jogo de adivinhação:
+// Pergunte um número entre 1 e 10. Exiba "Parabéns, você acertou!" se o número for igual a um número pré-definido (por exemplo, 7). Caso contrário, mostre "Tente novamente!".
+
+let acerto = 9
+let num = prompt("Digite um número de 1 a 10: ");
+
+if (num = acerto){
+    alert(`Parabéns, você acertou. O número era ${acerto}`)
+} else if {
+    alert("O número estava errrado, tente novamente. ")
+}
+
+// - **Avaliação de desempenho:**
+// Peça uma nota de 0 a 10 e informe a classificação do desempenho:
+//     - Nota entre 0 e 4: "Ruim".
+//     - Nota entre 5 e 7: "Bom".
+//     - Nota entre 8 e 10: "Excelente".
+
+let nota = prompt("Digite uma nota de 0 a 10 de acordo com sua satisfação com o serviço: ")
+
+if (nota >=0 && nota <=4){
+    alert("Satisfação RUIM. ");
+} else if (nota >= 5 && nota <=7){
+    alert("Satisfação BOA. "); 
+} else if (nota >=8 && nota <=10){
+    alert("Satisfação EXCELENTE.")
+}
+
+// DESAFIO FINAL
+
+// Imagine que você é responsável por um sistema de avaliação de candidatos para uma vaga de emprego. Crie um programa em JavaScript que siga o seguinte fluxo:
+
+// 1. **Entrada de Dados:**
+//     - Pergunte ao candidato:
+//         - **Nome** (string)
+//         - **Idade** (número)
+//         - **Pontuação na Prova Técnica** (0 a 10, número)
+//         - **Pontuação na Entrevista** (0 a 10, número)
+
+let nome = prompt("Digite seu nome: ");
+let idade = prompt("Digite sua idade: ");
+let prova = prompt("Digite sua nota da prova técnica: ")
+let entre = prompt("Digite sua nota da entrevista: ")
+
+// 2. **Critérios de Seleção:**
+//     - **Idade Mínima:** O candidato deve ter no mínimo 18 anos.
+//     - **Prova Técnica:** A pontuação mínima para aprovação é 7.
+//     - **Entrevista:** A pontuação mínima para aprovação é 6.
+//     - Para ser considerado **"Altamente Qualificado"**, o candidato deve ter uma média geral (Prova Técnica e Entrevista) igual ou superior a 8.
+
+if (idade <18){
+    alert(`Desculpe, ${nome}, você não atende aos critérios de idade.`)
+} else if{
+    alert("Continue. ")
+}
+
+if (prova <7){
+    alert(`Desculpe, ${nome}, você reprovou na prova.`)
+} else if{
+    alert(`Parabéns, ${nome}, você passou na prova.`)
+}
+
+if (entrevista <6 ){
+    alert(`Desculpe, ${nome}, você reprovou na entrevista.`)
+} else if{
+    alert(`Parabéns, ${nome}, você passou na entrevista.`)
+}
+
+if (prova && entrevista >= 8){
+    alert(`Parabéns, ${nome}, você é altamente qualificado para o cargo!`)
+}
+
+
+
+    </script>
+</body>
+
+</html>

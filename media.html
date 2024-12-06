@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+
+    <button class="home">HOME</button>
+    <style>
+        body{
+            background-image: url(imagens/4.webp);
+            background-repeat: no-repeat;
+            background-size: 1920px 1080px;
+        }
+        button{
+    background-color: rgb(255, 253, 127);
+    border: solid 1px rgb(255, 253, 127);
+    margin-left: 4rem;
+    margin-top: 10px;
+    height: 5rem;
+    width: 6rem;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    transition: 1s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: rgb(255, 204, 127) ;
+    transition: 1s;
+    border-radius: 20px;
+}
+    </style>
+    <script>
+        
+
+let nota1 = Number(prompt("Digite a nota da primeira prova: "));
+let nota2 = Number(prompt("Digite a nota da segunda prova: "));
+let nota3 = Number(prompt("Digite a nota da terceira prova: "));
+let nota4 = Number(prompt("Digite a nota da quarta prova: "));
+let media = (nota1 + nota2 + nota3 + nota4) / 4
+
+if (media >= 7){
+    alert("Aprovado! ");
+} else if (media >= 5){
+    alert("Recuperação. ")
+} else if (media < 5){
+    alert("Reprovado. ")
+}
+
+function redirecionar(pagina) {
+            window.location.href = pagina;
+        }
+        
+document.querySelector('.home').addEventListener('click', function() {
+            redirecionar('index.html');
+        });
+    </script>
+</body>
+</html>

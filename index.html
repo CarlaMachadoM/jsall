@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade JavaScript: Navegação e Exercícios DOM</title>
+</head>
+<body>
+    <h1> Exercícios JS </h1>
+    <button class="adivinhacao">Adivinhação</button>
+    <button class="bissexto">Ano Bissexto</button>
+    <button class="media">Média Escolar</button>
+    <button class="gorjeta">Gorjeta</button>
+    <button class="saudacao">Saudação</button>
+    <button class="desafio">Desafio</button>
+
+
+<style>
+
+body{
+    background-image: url(imagens/seagull-sky-holiday-bird-56618.webp);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+}
+
+h1{
+    color: hotpink;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+button{
+    background-color: rgb(255, 253, 127);
+    border: solid 1px rgb(255, 253, 127);
+    margin-left: 4rem;
+    margin-top: 10px;
+    height: 5rem;
+    width: 6rem;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    transition: 1s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: rgb(255, 204, 127) ;
+    transition: 1s;
+    border-radius: 20px;
+}
+</style>
+
+    <script>
+        // Função para redirecionar
+        function redirecionar(pagina) {
+            window.location.href = pagina;
+        }
+
+        // Adicionando evento de clique aos botões
+        document.querySelector('.adivinhacao').addEventListener('click', function() {
+            redirecionar('adivinhacao.html');
+        });
+
+        document.querySelector('.bissexto').addEventListener('click', function() {
+            redirecionar('bissexto.html');
+        });
+
+        document.querySelector('.media').addEventListener('click', function() {
+            redirecionar('media.html');
+        });
+
+        document.querySelector('.gorjeta').addEventListener('click', function() {
+            redirecionar('gorjeta.html');
+        });
+
+        document.querySelector('.saudacao').addEventListener('click', function() {
+            redirecionar('saudacao.html');
+        });
+
+        document.querySelector('.desafio').addEventListener('click', function() {
+            redirecionar('desafio.html');
+        });
+    </script>
+</body>
+</html>

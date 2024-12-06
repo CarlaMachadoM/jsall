@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação</title>
+</head>
+<body>
+    
+    <button class="home">HOME</button>
+    <style>
+        body{
+            background-image: url(imagens/5.webp);
+            background-repeat: no-repeat;
+            background-size: 1920px 1080px;
+        }
+        button{
+    background-color: rgb(255, 253, 127);
+    border: solid 1px rgb(255, 253, 127);
+    margin-left: 4rem;
+    margin-top: 10px;
+    height: 5rem;
+    width: 6rem;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    transition: 1s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: rgb(255, 204, 127) ;
+    transition: 1s;
+    border-radius: 20px;
+}
+    </style>
+    <script>
+        
+let hora = new Date().getHours();
+
+if (hora >= 0 && hora < 12){
+    alert(`Bom dia, são ${hora} horas.`);
+} else if (hora >= 12 && hora <=18){
+    alert(`Boa tarde, são ${hora} horas.`)
+} else if (hora >18 && hora <24){
+    alert(`Boa noite, são ${hora} horas. `)
+}
+
+function redirecionar(pagina) {
+            window.location.href = pagina;
+        }
+        
+document.querySelector('.home').addEventListener('click', function() {
+            redirecionar('index.html');
+        });
+    </script>
+</body>
+</html>
